@@ -33,9 +33,3 @@ jobs:
         
     - name: creating build
       run: yarn build
-     
-    - name: installing surge
-      run: npm install -g surge
-    
-    - name: deploying on surge
-      run: surge ./build http://mydiary.surge.sh/ --token ${{ secrets.MY_TOKEN }}
