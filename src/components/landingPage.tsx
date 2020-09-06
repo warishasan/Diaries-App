@@ -8,6 +8,9 @@ import Entries from './entries'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import { removeDiaries } from '../features/diary/diariesSlice';
+import { removeEntries } from '../features/entry/entriesSlice';
+import { selectDiary } from '../features/diary/diarySelectedSlice'
+
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -61,6 +64,8 @@ function LandingPage() {
     store.dispatch(saveToken(null))
     store.dispatch(setAuthState(false))
     store.dispatch(removeDiaries())
+    store.dispatch(selectDiary(null))
+    store.dispatch(removeEntries())
 
   }
 
