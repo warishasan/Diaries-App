@@ -7,7 +7,7 @@ import { setupServer } from './services/mirage/server';
 import { Provider } from 'react-redux';
 import store from './store';
 
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'production') {
   setupServer();
 }
 
